@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "leaderboard",
+			"path": "."
+		},
+		{
+			"path": "../../leaderboard/src"
+		}
+	],
+	"settings": {}
+}
