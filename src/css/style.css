@@ -5,17 +5,20 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
 }
 
 .container-wrap {
   width: 90%;
   margin: 0 auto;
-  display: flex;
-  gap: 50px;
+  display: block;
 }
 
 .display-score {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -29,6 +32,15 @@ body {
 
 .btn {
   padding: 6px 12px;
+  background: #03a5f6;
+  color: #f8f8f8;
+  transition: background 1s;
+  border: none;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background: #4ac0fb;
 }
 
 .scores {
@@ -50,7 +62,15 @@ li {
 }
 
 .add-score {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+form.add-score {
+  width: 100%;
+  display: block;
 }
 
 form input {
@@ -62,4 +82,28 @@ form input {
 .sub-btn {
   float: right;
   width: 60px;
+  background: #03a5f6;
+  color: #f8f8f8;
+  transition: background 1s;
+  border: none;
+  border-radius: 3px;
+}
+
+.sub-btn:hover {
+  background: #4ac0fb;
+}
+
+@media (min-width: 768px) {
+  .container-wrap {
+    display: flex;
+    gap: 50px;
+  }
+
+  .display-score {
+    width: 50%;
+  }
+
+  .add-score {
+    width: 50%;
+  }
 }
