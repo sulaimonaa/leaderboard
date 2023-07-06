@@ -98,11 +98,11 @@ form input {
     display: flex;
     gap: 50px;
   }
-  
+
   .display-score {
     width: 50%;
   }
-  
+
   .add-score {
     width: 50%;
   }
