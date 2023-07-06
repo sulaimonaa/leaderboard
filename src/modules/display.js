@@ -1,45 +1,17 @@
-const scores = [
-  {
-    player: 'Name',
-    playerScore: 100,
-  },
-  {
-    player: 'Name',
-    playerScore: 20,
-  },
-  {
-    player: 'Name',
-    playerScore: 50,
-  },
-  {
-    player: 'Name',
-    playerScore: 78,
-  },
-  {
-    player: 'Name',
-    playerScore: 125,
-  },
-  {
-    player: 'Name',
-    playerScore: 77,
-  },
-  {
-    player: 'Name',
-    playerScore: 42,
-  },
-];
+const leaderBoardList = document.querySelector('.scores');
+const createListItem = (userData) => {
+  const scoreListItemEl = document.createElement('ul');
+  const userScoreEl = document.createElement('li');
+  userScoreEl.innerText = `${userData[0]} : ${userData[1]}`;
+  scoreListItemEl.appendChild(userScoreEl);
+  leaderBoardList.appendChild(scoreListItemEl);
+};
 
-const scoreboard = document.querySelector('.scores');
-
-const display = () => {
-  scoreboard.innerHTML = '';
-  scores.forEach((score) => {
-    const scoreList = document.createElement('ul');
-    scoreList.innerHTML = `
-                  <li>${score.player}: ${score.playerScore}</li>
-              `;
-
-    scoreboard.appendChild(scoreList);
+const display = (game) => {
+  leaderBoardList.innerHTML = '';
+  game.forEach((element) => {
+    const userData = Object.values(element).reverse();
+    createListItem(userData);
   });
 };
 

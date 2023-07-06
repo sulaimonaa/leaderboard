@@ -12,7 +12,7 @@
         <div class="display-score">
           <div class="top">
             <h2>Recent score</h2>
-            <button class="btn">Refresh</button>
+            <button class="btn" id="getallscores">Refresh</button>
           </div>
           <div class="scores"></div>
         </div>
@@ -20,9 +20,9 @@
           <div class="top">
             <h2>Add your score</h2>
           </div>
-          <form action="" method="post">
-            <input type="text" name="" id="" placeholder="Your name" />
-            <input type="text" name="" id="" placeholder="Your score" />
+          <form action="" class="add-score">
+            <input type="text" name="user" placeholder="Your name" id="name" />
+            <input type="number" name="score" placeholder="Your score" id="score" />
             <input type="submit" value="Submit" class="sub-btn" />
           </form>
         </div>

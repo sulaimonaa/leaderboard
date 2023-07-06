@@ -1,4 +1,10 @@
 import './css/style.css';
-import display from './modules/display.js';
+import Game from './modules/games.js';
+import initRefreshBtn from './modules/refresh.js';
+import initScoreSubmit from './modules/addScore.js';
 
-display();
+const game = new Game();
+
+game.getScores();
+initScoreSubmit(game);
+initRefreshBtn(game);
